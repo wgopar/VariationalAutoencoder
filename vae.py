@@ -1,10 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-from torch.autograd import Variable
 from torch import optim
-
-NUM_EPOCHS = 2
 
 
 class VAE(nn.Module):
@@ -49,7 +46,6 @@ class VAE(nn.Module):
         self.train()
         optimizer = optim.SGD(self.parameters(), lr=self.learn_rate)
 
-        train_loss = 0
         output, self.mean, self.logvar = self.forward(data)
         loss = loss_function(output, data, self.mean, self.logvar)
 
