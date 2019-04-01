@@ -1,4 +1,4 @@
-# VariationalAutoencoder
+# Variational Autoencoder
 
 Basic implementaion of a Variational Autoencoder using PyTorch. Can be used as a starting point for creating your own.
 
